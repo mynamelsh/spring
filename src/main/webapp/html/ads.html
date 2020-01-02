@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../bootStrap/css/bootstrap.min.css">
+    <script src="../bootStrap/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="../bootStrap/js/bootstrap.js"></script>
+</head>
+<body>
+<!--导航栏-->
+<nav class="navbar navbar-inverse">
+    <div calss="container-fluid">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#
+            s-example-navbar-collapse-1">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">后台管理系统</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span>欢迎:</span>
+                        <span>小黑</span></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-hand-right"></span>
+                        <span>退出登录</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <!--导航菜单-->
+        <div class="col-sm-2" >
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <center>用户管理</center>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <a href="zyes.html">
+                                <button type="button" class="btn btn-danger">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用户类表&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <center>类别管理</center>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <center>图书管理</center>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            VHS.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-9">
+            <div class="page-header" style="margin-top:-16px">
+                <h3>用户信息管理</h3>
+            </div>
+
+            <div class="panel panel-body">
+                <form action="" class="form-inline">
+                    <div class="form-group">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#aaa" data-toggle="tab">用户信息</a></li>
+                            <li><a data-toggle="modal" data-target="#myModal">添加用户信息</a></li>
+
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="aaa">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+
+                                            <form action="" class="form-inline">
+                                                <div class="form-group">
+                                                    <label for="name">客户姓名</label>
+                                                    <input id="name" type="text" class="form-control" placeholder="请输入用户名"/>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="name">手机</label>
+                                                    <input  type="text" class="form-control" placeholder="请输入用户手机号"/>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>激活状态</label>
+                                                    <select name="" class="form-control">
+                                                        <option value="">---请选择---</option>
+                                                        <option value="">---未激活---</option>
+                                                        <option value="">----激活----</option>
+                                                    </select>
+                                                </div>
+                                                <button class="btn btn-primary">查询</button>
+                                            </form>
+                                    </div>
+
+                                    <div class="panel-body text-center">
+                                        <table class="table table-hover table-bordered table-striped">
+                                            <thead>
+                                            <tr>
+                                                <th>id</th>
+                                                <th>name</th>
+                                                <th>password</th>
+                                                <th>birthday</th>
+                                                <th>phone</th>
+                                                <th>state</th>
+                                                <th>operation </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>张三</td>
+                                                <td>1111111</td>
+                                                <td>2010-10-10</td>
+                                                <td>13888888888</td>
+                                                <td>未激活</td>
+                                                <td><a href="#"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModa12">修改</button></a>
+                                                    <a href="#"><button class="btn btn-primary">删除</button></a>
+                                                   
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>李四</td>
+                                                <td>1111111</td>
+                                                <td>2010-10-10</td>
+                                                <td>13888888888</td>
+                                                <td>未激活</td>
+                                                <td><a href="#"><button class="btn btn-primary">修改</button></a>
+                                                    <a href="#"><button class="btn btn-primary">删除</button></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>王五</td>
+                                                <td>1111111</td>
+                                                <td>2010-10-10</td>
+                                                <td>13888888888</td>
+                                                <td>未激活</td>
+                                                <td><a href="#"><button class="btn btn-primary" >修改</button></a>
+                                                    <a href="#"><button class="btn btn-primary">删除</button></a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <nav class="text-center">
+                                            <ul class="pager">
+                                                <li><a href="#">上一页</a></li>
+                                                <li><a href="#">下一页</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                           <!-- <div class="tab-pane" id="bbb">
+                               xxxxxxxxxx
+                            </div>-->
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </div>
+</div>
+</div>
+<!--添加模态框-->
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  添加用户
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
+                    </div>
+                </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">Age</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputPassword2" placeholder="Age">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">Birthday</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" id="inputPassword5" placeholder="Birthday">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">Phone</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputPassword3" placeholder="Phone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">激活状态</label>
+                          <div class="col-sm-3">
+                        <select name="" class="form-control">
+                            <option value="">---请选择---</option>
+                            <option value="">---未激活---</option>
+                            <option value="">----激活----</option>
+                        </select>
+                          </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">保存</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--修改模态框-->
+<div class="modal fade" tabindex="-1" role="dialog" id="myModa12">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                修改用户
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">Age</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputAge" placeholder="Age">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">Birthday</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" id="inputBirthday" placeholder="Birthday">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">Phone</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">激活状态</label>
+                        <div class="col-sm-3">
+                            <select name="" class="form-control">
+                                <option value="">---请选择---</option>
+                                <option value="">---未激活---</option>
+                                <option value="">----激活----</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">保存</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

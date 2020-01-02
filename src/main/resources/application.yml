@@ -1,0 +1,32 @@
+server:
+     port: 9876
+     servlet:
+       jsp:
+         init-parameters:
+           development: true
+       context-path: /spring
+spring:
+      datasource:
+        username: root
+        password: root
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://127.0.0.1:3306/novel
+        driver-class-name: com.mysql.jdbc.Driver
+      mvc:
+        view:
+          prefix: /
+          suffix: .jsp
+      redis:
+        host: 192.168.122.12
+        port: 6379
+        database: 0
+      data:
+        elasticsearch:
+          cluster-nodes: 192.168.122.13:9300
+mybatis:
+  mapper-locations: mapper/*.xml
+  type-aliases-package: com.baizhi.entity
+logging:
+  level:
+    root: error
+    com.baizhi.dao: debug

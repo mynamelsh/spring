@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.dao.UserDao">
+<!--二级缓存-->
+    <cache type="com.baizhi.cache.MyRedis"/>
+    <!--分页-->
+    <select id="selectAll" resultType="User">
+        select id,name,password,birthday,phone,state from myuser limit #{page},#{rows}
+    </select>
+    <!--总条数-->
+    <select id="countAll" resultType="int">
+        select count(id) from myuser
+    </select>
+    <!--删除-->
+    <delete id="delete">
+        delete from myuser where id=#{id}
+    </delete>
+    <!--修改-->
+    <update id="update">
+        update myuser <set>
+        <if test="name!=null"> name=#{name},</if>
+        <if test="password!=null">password=#{password},</if>
+        <if test="birthday!=null">birthday=#{birthday},</if>
+        <if test="phone!=null">phone=#{phone},</if>
+        <if test="state!=null">state=#{state},</if>
+    </set>
+        where id=#{id}
+    </update>
+    <!--添加-->
+    <insert id="insert">
+        insert into myuser values(#{id},#{name},#{password},#{birthday},#{phone},#{state})
+    </insert>
+
+
+    <!--查所有-->
+    <select id="queryDao" resultType="User">
+         select id,name,password,birthday,phone,state from myuser
+    </select>
+</mapper>
